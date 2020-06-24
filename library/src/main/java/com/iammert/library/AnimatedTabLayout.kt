@@ -64,6 +64,12 @@ class AnimatedTabLayout : FrameLayout {
         }
     }
 
+    fun setSelectedTab(pos: Int) {
+        this.selectedTab.collapse()
+        this.selectedTab = this.tabs[pos]
+        this.selectedTab.expand()
+    }
+
     fun setTabChangeListener(onChangeListener: OnChangeListener?){
         this.onChangeListener = onChangeListener
     }
